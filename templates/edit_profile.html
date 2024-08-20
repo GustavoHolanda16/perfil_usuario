@@ -4,20 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Perfil</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/edit_profile.css') }}">
 </head>
 <body>
-    <h1>Editar Perfil</h1>
-    <form method="POST" enctype="multipart/form-data">
-        <label for="name">Nome:</label><br>
-        <input type="text" id="name" name="name" value="{{ profile.name }}"><br><br>
-        
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" value="{{ profile.email }}"><br><br>
-        
-        <label for="bio">Biografia:</label><br>
-        <textarea id="bio" name="bio">{{ profile.bio }}</textarea><br><br>
-        
-        <input type="submit" value="Salvar">
-    </form>
+    <div class="container">
+        <h1>Editar Perfil</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" value="{{ profile.name }}">
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="{{ profile.email }}">
+            
+            <label for="bio">Biografia:</label>
+            <textarea id="bio" name="bio">{{ profile.bio }}</textarea>
+            
+            <input type="submit" value="Salvar">
+        </form>
+    </div>
 </body>
 </html>

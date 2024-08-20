@@ -6,7 +6,6 @@ from config import Config
 app = Flask(__name__)
 app.config.from_object(Config)
 
-# Armazenamento de perfis em memória para este exemplo
 profiles = []
 
 @app.route('/')
